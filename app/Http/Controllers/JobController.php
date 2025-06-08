@@ -162,8 +162,13 @@ class JobController extends AppBaseController
         $input['is_freelance'] = (isset($input['is_freelance'])) ? 1 : 0;
         $job = $this->jobRepository->update($input, $job);
 
-        Flash::success(__('messages.flash.job_update'));
+        if ($job) {
+            Flash::success(__('messages.flash.job_update'));
 
+            return redirect(route('job.index'));
+        }
+
+        Flash::error(__('Something went wrong while updating the job.'));
         return redirect(route('job.index'));
     }
 
