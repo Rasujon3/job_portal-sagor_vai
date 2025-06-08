@@ -2,7 +2,6 @@
 /public/uploads
 /storage/*.key
 /vendor
-.env
 .env.backup
 /.phpunit.cache
 Homestead.json
@@ -13,3 +12,4 @@ yarn-error.log
 .idea
 /_ide_helper.php
 /resources/backups
+config.bat

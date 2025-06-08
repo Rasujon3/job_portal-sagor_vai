@@ -1,4 +1,6 @@
 <div class="row">
+    <input type="hidden" name="company_id" value="{{ $data['companies']?->id }}">
+
     <div class="col-xl-6 col-md-6 col-sm-12 mb-5">
         {{ Form::label('job_title', __('messages.job.job_title').':', ['class' => 'form-label']) }}
         <span class="required"></span>

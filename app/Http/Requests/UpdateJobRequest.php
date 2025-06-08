@@ -41,6 +41,8 @@ class UpdateJobRequest extends FormRequest
     {
         return $messages = [
             'state_id.required' => __('messages.state_required'),
+            'company_id.required' => 'Company is required.',
+            'company_id.exists' => 'Selected company is invalid.',
         ];
     }
 }

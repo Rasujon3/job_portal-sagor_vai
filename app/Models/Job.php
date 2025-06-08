@@ -221,7 +221,7 @@ class Job extends Model
      * @var array
      */
     public static $rules = [
-        'company_id' => 'sometimes|required',
+        'company_id' => 'sometimes|required|exists:companies,id',
         'job_title' => 'required|max:180',
         'currency_id' => 'required',
         'salary_period_id' => 'required',
